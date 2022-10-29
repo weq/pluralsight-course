@@ -97,5 +97,5 @@ println!("{}", airline_name);
 let mut slogan = String::new(); // Creates a new empty `string`.
 slogan.push_str("We hit the ground"); // Pushes a string into the var.
 slogan.push(' '); // Push a single charcter into the variable, and MUST use single-quotes.
-slogan = slogan + "every time"; // Classic + style concatenation.
+slogan = slogan + "every time"; // Classic + style concatenation. NOTE: It must be `&str` on the right side of the `+`.
 ```

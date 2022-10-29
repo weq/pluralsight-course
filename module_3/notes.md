@@ -73,3 +73,29 @@ You can use it like this `let my_string = "Hello World";`. You can convert a str
 - Can be stored on the heap, stack or embedded in the compiled code
 
 You can use it like this `let my_string = "Hello World".to_string();`
+
+#### Concatenation
+
+`String` is returned when you concatenate two `&str`.
+Two methods for concatenating strings are:
+
+```rust
+let duck = "Duck";
+let airlines = "Airlines";
+
+// Method 1 - Array concatenation
+let airline_name = [duck, " ", airlines].concat();
+println!("{}", airline_name);
+// returns Duck Airlines
+
+// Method 2 - format!() macro usage.
+let airline_name = format!("{} {}", duck, airlines);
+println!("{}", airline_name);
+// returns Duck Airlines
+
+// Method 3 & 4 - String method push and + style concatention.
+let mut slogan = String::new(); // Creates a new empty `string`.
+slogan.push_str("We hit the ground"); // Pushes a string into the var.
+slogan.push(' '); // Push a single charcter into the variable, and MUST use single-quotes.
+slogan = slogan + "every time"; // Classic + style concatenation.
+```
